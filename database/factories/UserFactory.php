@@ -5,8 +5,8 @@ namespace Database\Factories;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
-use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class UserFactory extends Factory
 {
@@ -33,7 +33,7 @@ class UserFactory extends Factory
 
             // Ambil atau buat Permissions
             $permissions = Permission::pluck('id', 'name'); // Ambil ID dan Nama permission
-            
+
             // Set Role dan Permission sesuai spesifikasi
             switch ($user->email) {
                 case 'admin@example.com':
