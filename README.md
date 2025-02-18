@@ -53,13 +53,15 @@ Proyek ini menggunakan beberapa library dan package untuk mengelola Role-Based A
    ```sh
    php artisan migrate --seed
    ```
+7. **Install NPM**
+   Jalankan perintah ``npm install`` dan kemudian ``npm run build`` setelah itu ``npm run dev``
 
-7. **Menjalankan Proyek**  
-   Jalankan perintah berikut untuk menjalankan aplikasi:
+8. **Menjalankan Proyek**  
+   Buka terminal yang lain dan Jalankan perintah berikut untuk menjalankan aplikasi:
    ```sh
    php artisan octane:frankenphp
    ```
-8. **Akun User
+9. **Akun User**
    ```sh
    Admin : admin@example.com | password
    Manager : manager@example.com | password
