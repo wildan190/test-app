@@ -23,7 +23,7 @@
 
                     <div>
                         <label for="item_price" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Item Price</label>
-                        <input type="text" id="item_price" name="item_price" required min="0" class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-gray-300" oninput="formatRupiah(this)">
+                        <input type="number" id="item_price" name="item_price" required min="0" class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-gray-300" oninput="formatRupiah(this)">
                     </div>
 
                     <div>
@@ -37,11 +37,11 @@
         </div>
     </div>
 
-    <script>
+    {{-- <script>
         function formatRupiah(input) {
             let value = input.value.replace(/[^0-9]/g, '');
             let formatted = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
             input.value = 'Rp ' + formatted;
         }
-    </script>
+    </script> --}}
 </x-app-layout>
