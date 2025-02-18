@@ -59,10 +59,10 @@ Proyek ini menggunakan beberapa library dan package untuk mengelola Role-Based A
    ```sh
    php artisan octane:frankenphp
    ```
-
-Aplikasi kini dapat diakses melalui browser sesuai konfigurasi server yang digunakan.
-
----
-
-Semoga bermanfaat! 🚀
+8. **Akun User
+   ```sh
+   Admin : admin@example.com | password
+   Manager : manager@example.com | password
+   User : user@example.com | password
+   ```
 
