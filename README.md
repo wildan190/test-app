@@ -59,9 +59,13 @@ Proyek ini menggunakan beberapa library dan package untuk mengelola Role-Based A
 8. **Menjalankan Proyek**  
    Buka terminal yang lain dan Jalankan perintah berikut untuk menjalankan aplikasi:
    ```sh
-   php artisan octane:frankenphp
+   php artisan octane:frankenphp 
    ```
-9. **Akun User**
+   Atau
+   ```sh
+   php artisan serve
+   ```
+10. **Akun User**
    ```sh
    Admin : admin@example.com | password
    Manager : manager@example.com | password
