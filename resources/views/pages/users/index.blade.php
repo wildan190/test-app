@@ -22,8 +22,11 @@
                 @endif
 
                 <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
-                    <div class="border-b border-gray-200 dark:border-gray-700">
-                        <h6 class="text-xl font-bold text-gray-800 dark:text-gray-200 p-4">{{ __('Users') }}</h6>
+                    <div class="border-b border-gray-200 dark:border-gray-700 flex justify-between items-center p-4">
+                        <h6 class="text-xl font-bold text-gray-800 dark:text-gray-200">{{ __('Users') }}</h6>
+                        <a href="{{ route('users.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            {{ __('Create User') }}
+                        </a>
                     </div>
                     <div class="p-4">
                         <div class="overflow-x-auto">

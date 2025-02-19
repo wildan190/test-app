@@ -15,6 +15,28 @@ class UserController extends Controller
         return view('pages.users.index', compact('users'));
     }
 
+    public function create()
+    {
+        return view('pages.users.create');
+    }
+
+    public function createUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return redirect()->route('users.index')->with('success', 'User created successfully.');
+    }
+
     public function edit($id)
     {
         $user = User::findOrFail($id);

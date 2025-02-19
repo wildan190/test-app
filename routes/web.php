@@ -49,3 +49,8 @@ Route::group(['prefix' => 'users-management', 'middleware' => 'auth', 'middlewar
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::group(['prefix' => 'users-management', 'middleware' => 'auth', 'middleware' => 'permission:AccessUser'], function () {
+    Route::get('/create', [UserController::class, 'create'])->name('users.create');
+    Route::post('/', [UserController::class, 'createUser'])->name('createUser');
+});
